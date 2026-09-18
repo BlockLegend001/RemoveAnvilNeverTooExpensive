@@ -64,12 +64,14 @@ publishMods {
         minecraftVersions.add(minecraft_version)
         clientRequired = true
         serverRequired = true
+        requires("fabric-api")
     }
 
     modrinth {
         accessToken = providers.environmentVariable("MODRINTH_TOKEN")
         projectId = "${modrinth_id}"
         minecraftVersions.add(minecraft_version)
+        requires("fabric-api")
     }
 }
 
